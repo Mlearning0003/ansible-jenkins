@@ -6,16 +6,3 @@
     update_cache: yes
     cache_valid_time: 3600
   become: yes
-
-- name: start nginx
-  service:
-    name: nginx
-    state: started
-  become: yes
-
-
-- name: index
-  template:
-    src: index.html.j2
-    dest: /var/www/html/index.html
-
